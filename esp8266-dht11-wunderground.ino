@@ -11,8 +11,8 @@ DHT dht(DHTPIN, DHTTYPE);
 
 ESP8266WebServer server(80);
 
-const char *WUNDERGROUND_ID = "ITROYA2";
-const char *WUNDERGROUND_KEY = "SzUMXmYd";
+const char *WUNDERGROUND_ID = "xxxxxxx";
+const char *WUNDERGROUND_KEY = "xxxxxxx";
 
 unsigned long previousMillis = 0;
 const long interval = 600000;  // 10 минути в милисекунди
@@ -48,7 +48,7 @@ void setup() {
   delay(10);
 
   dht.begin();
-  WiFi.begin("johnstalker", "babayaga");
+  WiFi.begin("user", "pass");
 
   Serial.print("Connecting to WiFi");
   while (WiFi.status() != WL_CONNECTED) {
